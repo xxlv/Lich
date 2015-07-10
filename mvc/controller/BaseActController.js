@@ -5,8 +5,6 @@ var
 	baseview=require('./../view/BaseView'),
 	path = require('path');
 
-
-
 // mvc abstract controller 
 function BaseActControllerDispath(ctx,controller,action){
 				
