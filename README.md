@@ -1,30 +1,94 @@
-#### 项目介绍
+## 项目介绍
 - NodeLich是一个使用NodeJS开发的轻量级的MVC框架，实现了路由转发,模块渲染，MVC等。
+  [![NPM Version][npm-image]][npm-url]
+  [![NPM Downloads][downloads-image]][downloads-url]
 
 
-#### 如何启动？
-    
- `
-var boot=require('./boot');
+## 安装
+
+```bash
+$ npm install nodelich
+```
+## 特色
+
+  * 非常轻量级MVC
+  * 强大而自由的配置
+  * 友好的路由映射
+
+## 快速上手
+
+现在你就可以获得noelich，你需要做的事情是:
+
+```bash
+$ npm install nodelich
+
+```
+
+## 如何开始
+
+- 建立一个app.js文件，内容如下；
+
+ ```js
+var boot=require('nodelich');
 var config={
 	'PORT':'8080',
-	'VIEW_TPL_EXT_NAME':'html'
+	'CONTROLLER_PATH':'../../../../../controllers/',
+	'VIEW_PATH':'../../../../../views/'
 };
 boot.run(config);
- `
+
+```
+
+```bash
+$ node app.js
+
+```
+
+- 建立一个控制器位于/controllers/下（这是可配置的，后面会介绍）
+/controllers/IndexController.js
+
+内容如下：
+
+ ```js
+function indexAction(res,req){
+
+	var view={};
+	return view;
+
+}
+
+exports.indexAction=indexAction;
+
+ ```
+ - 接下来为IndexController建立一个视图,位于/views/index
+
+
+ ```js
+<b>Hello NodeLich!</b>
+
+ ```
+
+ OK 所有的工作到目前为止就结束了,通过访问127.0.0.1:8080/index/index可以看到第一个Hello程序！很酷是吧！
+
+-----
+## 配置
+
+NodeLich 许多功能是可以配置的，包括侦听的端口号等。下面列出常见的配置。
 
 ----
-现在你可以在项目中增加controllers文件夹用来存放你的controller,并在views里面存放视图文件。
-NodeLich默认遵守"约定大于配置"的理念。
+- PORT 			    HTTP侦听端口	
+- CONTROLLER_PATH   控制器存放路径（注意现在是相对于nodelich源里面的router.js的路径，以后会调整~）
+- VIEW_PATH         视图存放路径
+- VIEW_TPL_EXT_NAME 模板后缀，默认为.html文件
+- CONTROLLER_EXT    控制器文件名EXT,默认为Controller,Index控制器为IndexController
+- ACTION_EXT		Action的EXT，默认为Action,index控制器为indexAction
 
-一般的，控制器为IndexController.js 使用驼峰命名法则，后面的Controller后缀是默认的。
-同样在IndexController中我们定义一个Action为indexAction
+## License
+
+  [MIT](LICENSE)
 
 
 
-这样，当在URL中访问/index/index的时候，NodeLich会默认的寻找到IndexController控制器的indexAction方法，对应的默认视图是/views/index/index.html文件。
-
-#### 希望得到大牛指导！
 
 
 
