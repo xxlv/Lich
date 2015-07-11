@@ -1,0 +1,94 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'X:\\nodejs\\\\node.exe',
+1 verbose cli   'X:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish',
+1 verbose cli   '--tag',
+1 verbose cli   '1.1.0.' ]
+2 info using npm@2.11.2
+3 info using node@v0.12.6
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'X:\\www\\NodeLich',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\lvxianfg\AppData\Roaming\npm-cache\nodelich\1.0.0\package.tgz not in flight; packing
+9 verbose tar pack [ 'C:\\Users\\lvxianfg\\AppData\\Roaming\\npm-cache\\nodelich\\1.0.0\\package.tgz',
+9 verbose tar pack   'X:\\www\\NodeLich' ]
+10 verbose tarball C:\Users\lvxianfg\AppData\Roaming\npm-cache\nodelich\1.0.0\package.tgz
+11 verbose folder X:\www\NodeLich
+12 info prepublish nodelich@1.0.0
+13 verbose addLocalTarball adding from inside cache C:\Users\lvxianfg\AppData\Roaming\npm-cache\nodelich\1.0.0\package.tgz
+14 silly cache afterAdd nodelich@1.0.0
+15 verbose afterAdd C:\Users\lvxianfg\AppData\Roaming\npm-cache\nodelich\1.0.0\package\package.json not in flight; writing
+16 verbose afterAdd C:\Users\lvxianfg\AppData\Roaming\npm-cache\nodelich\1.0.0\package\package.json written
+17 silly publish { name: 'nodelich',
+17 silly publish   version: '1.0.0',
+17 silly publish   description: 'This is very Lightweight Framework of NodeJS ',
+17 silly publish   main: 'boot.js',
+17 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+17 silly publish   repository: { type: 'git', url: 'git+https://github.com/xxlv/NodeLich.git' },
+17 silly publish   keywords: [ 'framework', 'mvc', 'node' ],
+17 silly publish   author: { name: 'xxlv' },
+17 silly publish   license: 'MIT',
+17 silly publish   bugs: { url: 'https://github.com/xxlv/NodeLich/issues' },
+17 silly publish   homepage: 'https://github.com/xxlv/NodeLich#readme',
+17 silly publish   readme: '#### 项目介绍\r\n- NodeLich是一个使用NodeJS开发的轻量级的MVC框架，实现了路由转发,模块渲染，MVC等。\r\n\r\n\r\n#### 如何启动？\r\n    \r\n `\r\nvar boot=require(\'./boot\');\r\nvar config={\r\n\t\'PORT\':\'8080\',\r\n\t\'VIEW_TPL_EXT_NAME\':\'html\'\r\n};\r\nboot.run(config);\r\n `\r\n\r\n----\r\n现在你可以在项目中增加controllers文件夹用来存放你的controller,并在views里面存放视图文件。\r\nNodeLich默认遵守"约定大于配置"的理念。\r\n\r\n一般的，控制器为IndexController.js 使用驼峰命名法则，后面的Controller后缀是默认的。\r\n同样在IndexController中我们定义一个Action为indexAction\r\n\r\n\r\n\r\n这样，当在URL中访问/index/index的时候，NodeLich会默认的寻找到IndexController控制器的indexAction方法，对应的默认视图是/views/index/index.html文件。\r\n\r\n#### 希望得到大牛指导！\r\n\r\n\r\n\r\n\r\n',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   gitHead: '9bcce867cf6c2b168a59f558d857758964ed9505',
+17 silly publish   _id: 'nodelich@1.0.0',
+17 silly publish   _shasum: '1412479bc5cb3780ae8dabe6bd834aa4a4d36411',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name nodelich
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/nodelich
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading C:\Users\lvxianfg\AppData\Roaming\npm-cache\nodelich\1.0.0\package.tgz
+25 verbose request uri https://registry.npmjs.org/nodelich
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 18:49:46
+28 verbose request using bearer token for auth
+29 verbose request id c347d653250ce400
+30 http request PUT https://registry.npmjs.org/nodelich
+31 http 403 https://registry.npmjs.org/nodelich
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=60',
+32 verbose headers   'content-length': '95',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Sat, 11 Jul 2015 10:49:42 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-nrt6127-NRT',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1436611781.902496,VS0,VE568' }
+33 verbose request invalidating C:\Users\lvxianfg\AppData\Roaming\npm-cache\registry.npmjs.org\nodelich on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : nodelich
+35 verbose stack     at CachingRegistryClient.<anonymous> (X:\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:247:14)
+35 verbose stack     at Request._callback (X:\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:170:14)
+35 verbose stack     at Request.self.callback (X:\nodejs\node_modules\npm\node_modules\request\request.js:354:22)
+35 verbose stack     at Request.emit (events.js:110:17)
+35 verbose stack     at Request.<anonymous> (X:\nodejs\node_modules\npm\node_modules\request\request.js:1207:14)
+35 verbose stack     at Request.emit (events.js:129:20)
+35 verbose stack     at IncomingMessage.<anonymous> (X:\nodejs\node_modules\npm\node_modules\request\request.js:1153:12)
+35 verbose stack     at IncomingMessage.emit (events.js:129:20)
+35 verbose stack     at _stream_readable.js:908:16
+35 verbose stack     at process._tickCallback (node.js:355:11)
+36 verbose statusCode 403
+37 verbose pkgid nodelich
+38 verbose cwd X:\www\NodeLich
+39 error Windows_NT 6.3.9600
+40 error argv "X:\\nodejs\\\\node.exe" "X:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish" "--tag" "1.1.0."
+41 error node v0.12.6
+42 error npm  v2.11.2
+43 error code E403
+44 error "You cannot publish over the previously published version 1.0.0." : nodelich
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]

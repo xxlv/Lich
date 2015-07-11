@@ -1,0 +1,24 @@
+{
+  "name": "nodelich",
+  "version": "1.0.0",
+  "description": "This is very Lightweight Framework of NodeJS ",
+  "main": "boot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxlv/NodeLich.git"
+  },
+  "keywords": [
+    "framework",
+    "mvc",
+    "node"
+  ],
+  "author": "xxlv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xxlv/NodeLich/issues"
+  },
+  "homepage": "https://github.com/xxlv/NodeLich#readme"
+}
