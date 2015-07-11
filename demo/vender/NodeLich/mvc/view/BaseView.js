@@ -1,9 +1,13 @@
-function _view(tpl,modle){
-	
+function _view(tpl,model){
 	return tpl;
 }
 
 
 
-//
+
+
+
+
+
+
 exports.view=_view;

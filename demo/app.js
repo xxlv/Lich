@@ -1,3 +1,3 @@
-var server=require('./_NodeLich/services/server');
+var server=require('./vender/NodeLich/services/server');
 
 server.start(8888);

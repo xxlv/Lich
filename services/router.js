@@ -1,6 +1,5 @@
 var fs=require('fs'),
 	stack=require('../exceptions/stack'),
-	configs=require('../configs/global'),
 	baseActController=require('../mvc/controller/BaseActController');
 
 
@@ -9,7 +8,7 @@ function route(ctx){
 		var pathname=ctx['pathname'],
 			response=ctx['response'],
 			request=ctx['request'],
-			config=configs.global();	
+			config=ctx['config'];	
 
 		//parse pathname
 		var setting=_parse(pathname,'/');
@@ -24,19 +23,24 @@ function route(ctx){
 		var _ctr_file=config['CONTROLLER_PATH']+_controller;
 
 		fs.exists(_ctr_file,function(exists){
-			try{
-				//dispath
-				baseActController['dispath'](ctx,_controller,_action);
-			}	
-			catch(e){
-				//not found
-				//if just throw this  http server will wait response  
-				//so this section , should give client a response
-				stack.printStack(e,response);
-	    	}
-
+			// if(exists===false){
+			// 	stack.printStack({'message':'Not found File'+_ctr_file,'name':'NotFoundFileEx'},response);
+			// }else{
+				try{
+					//dispath
+					baseActController['dispath'](ctx,_controller,_action);
+				}	
+				catch(e){
+					console.log('Can not found file '+ _ctr_file);
+					//not found
+					//if just throw this  http server will wait response  
+					//so this section , should give client a response
+					stack.printStack(e,response);
+				}
+			// }
 		});
 }
+
 
 function _parse(pathname,separator){
 	var settings={};

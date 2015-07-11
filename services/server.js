@@ -2,7 +2,8 @@
 var http=require('http'),
 	url=require('url'),
 	router=require('./router'),
-	stack=require('../exceptions/Stack');
+	stack=require('../exceptions/Stack')
+	configs=require('../configs/global');
 	
 	
 function start(port){
@@ -15,6 +16,7 @@ function start(port){
 		ctx['request']=request;
 		ctx['response']=response;
 		ctx['pathname']=pathname;
+		ctx['config']=configs.global();
 		router.route(ctx); 
 	}
 
