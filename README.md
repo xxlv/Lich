@@ -38,7 +38,7 @@ boot.run(config);
 ```
 
 
-```bash
+```
 $ node app.js
 
 ```
