@@ -39,6 +39,7 @@ boot.run(config);
 
 ```bash
 $ node app.js
+
 ```
 
 - 建立一个控制器位于/controllers/下（这是可配置的，后面会介绍）
