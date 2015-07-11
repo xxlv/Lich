@@ -2,8 +2,8 @@ function global(){
 	var config={};
 
 	config['PORT']=8080;
-	config['CONTROLLER_PATH']='../../controllers/';//controller dir
-	config['VIEW_PATH']='../../views/';//view dir
+	config['CONTROLLER_PATH']='../../testtcontrollers/';//controller dir
+	config['VIEW_PATH']='../../testviews/';//view dir
 	config['VIEW_TPL_EXT_NAME']='html';//tmp extname dir
 	config['CONTROLLER_EXT']='Controller';//controller
 	config['ACTION_EXT']='Action';//action

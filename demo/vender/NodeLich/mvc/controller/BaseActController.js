@@ -13,8 +13,14 @@ function BaseActControllerDispath(ctx,controller,action){
 			req=ctx['request'],
 			config=ctx['config'];
 
-		//TODO should replace Config get
 		//run controllers action
+		//设置默认值 例如：/ 定向到IndexController等
+		if(controller===ctx['config']['CONTROLLER_EXT']){
+			controller=ctx['config']['DEFAULT_CONTROLLER']+ctx['config']['CONTROLLER_EXT'];
+		}
+		if(action===ctx['config']['ACTION_EXT']){
+			action=ctx['config']['DEFAULT_ACTION']+ctx['config']['ACTION_EXT'];
+		}
 
 		var ctr=require(config['CONTROLLER_PATH']+controller);
 

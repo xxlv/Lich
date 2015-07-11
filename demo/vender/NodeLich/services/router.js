@@ -1,4 +1,5 @@
-var fs=require('fs'),
+var 
+	fs=require('fs'),
 	stack=require('../exceptions/stack'),
 	baseActController=require('../mvc/controller/BaseActController');
 
@@ -31,7 +32,6 @@ function route(ctx){
 					baseActController['dispath'](ctx,_controller,_action);
 				}	
 				catch(e){
-					console.log('Can not found file '+ _ctr_file);
 					//not found
 					//if just throw this  http server will wait response  
 					//so this section , should give client a response
