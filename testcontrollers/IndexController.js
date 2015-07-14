@@ -1,7 +1,11 @@
 function indexAction(res,req){
 
-	var view={};
-	view['foo']='bar';
+	var view={
+		'hello':{
+			'word':'Hello'
+		}
+	};
+	
 	return view;
 
 }
