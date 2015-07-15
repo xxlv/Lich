@@ -77,9 +77,13 @@ NodeLich 许多功能是可以配置的，包括侦听的端口号等。下面�
 - PORT 			    HTTP侦听端口	
 - CONTROLLER_PATH   控制器存放路径（注意现在是相对于nodelich源里面的router.js的路径，以后会调整~）
 - VIEW_PATH         视图存放路径
+- LAYOUT_PATH 		layout存放路径
 - VIEW_TPL_EXT_NAME 模板后缀，默认为.html文件
 - CONTROLLER_EXT    控制器文件名EXT,默认为Controller,Index控制器为IndexController
 - ACTION_EXT		Action的EXT，默认为Action,index控制器为indexAction
+
+
+
 
 ## License
 

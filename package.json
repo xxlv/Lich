@@ -2,7 +2,7 @@
   "name": "nodelich",
   "version": "1.1.1",
   "description": "This is very Lightweight Framework of NodeJS ",
-  "main": "boot.js",
+  "main": "/lib/boot.js",
   "bin":"./bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

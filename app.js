@@ -3,9 +3,9 @@ var boot=require('./boot');
 var config={
 	'PORT':'8080',
 	'VIEW_TPL_EXT_NAME':'html',
-	'CONTROLLER_PATH':'../../../testcontrollers/',//controller dir
-	'VIEW_PATH':'../../../testviews/',//view dir
-	'LAYOUT_PATH':'../../../testviews/layout/'//view dir
+	'CONTROLLER_PATH':'../../../controllers/',//controller dir
+	'VIEW_PATH':'../../../views/',//view dir
+	'LAYOUT_PATH':'../../../views/layout/'//view dir
 
 };
 
