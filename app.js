@@ -1,4 +1,4 @@
-var boot=require('./boot');
+var boot=require('./lib/boot');
 
 var config={
 	'PORT':'8080',
