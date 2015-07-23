@@ -24,8 +24,7 @@ $ npm install nodelich
 
 ## 如何开始
 
-- 建立一个app.js文件，内容如下；
-
+- 建立一个app.js文件，内容如下
  ```js
 var boot=require('nodelich');
 var config={
