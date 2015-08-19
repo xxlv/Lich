@@ -2,11 +2,15 @@ var Model = require('../models');
 
 function indexAction() {
     
-    
+    var view = {};
     var user_table = Model.get('user').table();//获取userTable
-    //var user = user_table.getUser();
-    user = user_table.getUser();
-    var view = {
+    user_table.getUser(function () { 
+   
+
+    });
+    
+    user = {"adminname":"amdin"};
+    view = {
         'user': user
     };
     view['_layout'] = 'layout';

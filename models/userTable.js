@@ -1,12 +1,10 @@
+
 var factory = require("../lib/db/DBFactory");
 var dbFactory = factory.DBFactoty();
-var Handle = dbFactory.create("mysql").DBH();
+var handle = dbFactory.create('mysql').MysqlHandle();
 
+function userTable(){
 
-
-function userTable(handle){
-    
-    
     var model = {};
 	var _tablename='user';	
 	var _colum={
@@ -15,12 +13,13 @@ function userTable(handle){
 		'pass_word':'string',
 		'is_admin':'boolean'
 	}	
-
+    
+    //这里需要将查询到的用户返回，但此时不知道该怎么从回调中返回，
+    //故使用一个函数来处理
     var getUser = function (){
-        return { user_name:1};
-		//return {'user_id':1,'user_name':'linaiqing','pass_word':'password','is_admin':'2'};
-		// return handle.select();
-	
+        var sql = 'select * from think_admin ';
+        var user = handle.query(sql, function (v) {});
+        return user;
 	}
 	model['_tablename']=_tablename;
 	model['_colum']=_colum;
