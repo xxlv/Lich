@@ -42,7 +42,7 @@ boot.run(config);
 
 ```
 
- ```js
+
 
 $ node app.js
 
