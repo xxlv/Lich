@@ -42,7 +42,8 @@ boot.run(config);
 
 ```
 
-```bash
+ ```js
+
 $ node app.js
 
 ```
