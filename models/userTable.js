@@ -16,11 +16,14 @@ function userTable(){
     
     //这里需要将查询到的用户返回，但此时不知道该怎么从回调中返回，
     //故使用一个函数来处理
-    var getUser = function (){
+    var getUser = function (fn){
         var sql = 'select * from think_admin ';
-        var user = handle.query(sql, function (v) {});
-        return user;
-	}
+        var user = handle.query(sql, function (v) {
+            fn(v);
+        });
+    }
+    
+
 	model['_tablename']=_tablename;
 	model['_colum']=_colum;
 	model['getUser']=getUser;

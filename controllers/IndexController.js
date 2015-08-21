@@ -1,14 +1,19 @@
 var Model = require('../models');
+var mysql = require('mysql');
+
+//这里应该从配置文件同步
+var connection = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'root',
+    password : '',
+    database : 'thinkphp'
+});
+connection.connect();
 
 function indexAction() {
-    
-    var view = {};
-    var user_table = Model.get('user').table();//获取userTable
-    user_table.getUser(function () { 
-   
 
-    });
-    
+
+    var view = {};
     user = {"adminname":"amdin"};
     view = {
         'user': user
@@ -20,7 +25,7 @@ function indexAction() {
 /**
  * add action 
  */
-function addAction(res, req, s) {
+function addAction(res, req) {
     
     var view = {};
     
