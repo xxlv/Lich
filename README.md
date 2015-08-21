@@ -11,7 +11,7 @@ $ npm install nodelich
 
   * 非常轻量级MVC
   * 强大而自由的配置
-  * 友好的路由映射
+  * PATH INFO路由映射
 
 ## 快速上手
 
@@ -26,12 +26,18 @@ $ npm install nodelich
 
 - 建立一个app.js文件，内容如下
  ```js
-var boot=require('nodelich');
-var config={
-	'PORT':'8080',
-	'CONTROLLER_PATH':'../../../../../controllers/',
-	'VIEW_PATH':'../../../../../views/'
+var boot = require('./lib/boot');
+
+var config = {
+    'PORT': '8080',
+    'VIEW_TPL_EXT_NAME': 'html',
+    'CONTROLLER_PATH': '../../../controllers/',//controller dir
+    'VIEW_PATH': '../../../views/',//view dir
+    'LAYOUT_PATH': '../../../views/layout/'//layout dir
+
 };
+console.log('NodeLich server listen on 127.0.0.1 port=' + config.PORT + ' ... ... ');
+
 boot.run(config);
 
 ```
@@ -70,7 +76,7 @@ exports.indexAction=indexAction;
 -----
 ## 配置
 
-NodeLich 许多功能是可以配置的，包括侦听的端口号等。下面列出常见的配置。
+NodeLich 功能是可以配置的，包括侦听的端口号等。下面列出常见的配置。
 
 ----
 - PORT 			    HTTP侦听端口	
