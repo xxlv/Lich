@@ -1,4 +1,6 @@
 ## 项目介绍
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/xxlv/NodeLich.svg)](https://greenkeeper.io/)
 - NodeLich是一个使用NodeJS开发的轻量级的MVC框架，实现了路由转发,模块渲染，MVC等。
 
 
